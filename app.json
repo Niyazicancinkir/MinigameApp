@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Bilirim",
+    "slug": "Bilirim",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/hello.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/ches.jpg",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/ches2.jpg"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cfcc214a-4c52-4d7e-bb48-252cbbed3e39"
+      }
+    }
+  }
+}
