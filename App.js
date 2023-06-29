@@ -13,7 +13,7 @@ import GameOverScreen from "./screens/GameOverScreen";
 
 import { LinearGradient } from "expo-linear-gradient";
 import Color from "./constants/Color";
-
+import { StatusBar } from "react-native";
 import AppLoading from "expo-app-loading";
 
 import { useFonts } from "expo-font";
@@ -27,7 +27,7 @@ export default function App() {
     "open-sans-bold": require("./assets/fonts/open-sans-bold.ttf"),
   });
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null;
   }
 
   function pickedNumerHandler(pickedNumber) {
@@ -58,21 +58,25 @@ export default function App() {
         onStartNewGame={onStartNewGame}
       />
     );
+    console.log(22);
   }
   return (
-    <LinearGradient
-      colors={[Color.primary600, Color.accent500]}
-      style={styles.rootScreen}
-    >
-      <ImageBackground
-        source={require("./assets/images/background.png")}
-        resizeMode="cover"
+    <>
+      <StatusBar style={"light"} />
+      <LinearGradient
+        colors={[Color.primary600, Color.accent500]}
         style={styles.rootScreen}
-        imageStyle={styles.backgrounImage}
       >
-        <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
-      </ImageBackground>
-    </LinearGradient>
+        <ImageBackground
+          source={require("./assets/images/background.png")}
+          resizeMode="cover"
+          style={styles.rootScreen}
+          imageStyle={styles.backgrounImage}
+        >
+          <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
+        </ImageBackground>
+      </LinearGradient>
+    </>
   );
 }
 

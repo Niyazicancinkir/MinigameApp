@@ -67,7 +67,7 @@ export default function GameScreen({ userNumber, onGameOver }) {
       <NumberContainer>{currentGuess}</NumberContainer>
       <Card>
         <InstructionText style={styles.InstructionText}>
-          Higher or Lower
+          Lower or Higher
         </InstructionText>
         <View style={styles.butonlocation}>
           <View style={styles.butonaligment}>
@@ -98,9 +98,9 @@ export default function GameScreen({ userNumber, onGameOver }) {
   );
 }
 const styles = StyleSheet.create({
-  screen: { flex: 1, padding: 24, marginTop: 20 },
+  screen: { flex: 1, padding: 24, marginTop: 20, alignItems: "center" },
   butonaligment: { flex: 1 },
   butonlocation: { flexDirection: "row" },
-  InstructionText: { marginBottom: 12 },
+  InstructionText: { marginBottom: 12, fontFamily: "open-sans" },
   listContainer: { flex: 1, padding: 16 },
 });
